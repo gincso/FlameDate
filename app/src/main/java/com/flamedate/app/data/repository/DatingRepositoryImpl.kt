@@ -112,22 +112,22 @@ class DatingRepositoryImpl(
         userDao.upsertUser(currentUser)
 
         val mockProfiles = listOf(
-            UserEntity("u1", "Emma", 24, "Love hiking and coffee", "https://i.pravatar.cc/400?img=1", "Hiking|Coffee|Photography", 2.5, "Engineer", "MIT", true, false),
-            UserEntity("u2", "Sophia", 26, "Foodie & traveler", "https://i.pravatar.cc/400?img=5", "Travel|Cooking|Yoga", 1.2, "Doctor", "Harvard", true, false),
-            UserEntity("u3", "Olivia", 23, "Bookworm and dreamer", "https://i.pravatar.cc/400?img=9", "Reading|Art|Music", 3.8, "Teacher", "UCLA", false, false),
-            UserEntity("u4", "Isabella", 27, "Adventure seeker", "https://i.pravatar.cc/400?img=3", "Climbing|Diving|Travel", 0.8, "Architect", "Columbia", true, false),
-            UserEntity("u5", "Mia", 25, "Dog mom & plant lover", "https://i.pravatar.cc/400?img=6", "Pets|Gardening|Cooking", 5.0, "Writer", "NYU", false, false),
-            UserEntity("u6", "Charlotte", 28, "Yoga instructor", "https://i.pravatar.cc/400?img=12", "Yoga|Meditation|Health", 4.2, "Instructor", "Stanford", true, false),
-            UserEntity("u7", "Amelia", 22, "Art & fashion enthusiast", "https://i.pravatar.cc/400?img=8", "Fashion|Art|Dancing", 1.5, "Student", "Parsons", false, false),
-            UserEntity("u8", "Harper", 26, "Music producer", "https://i.pravatar.cc/400?img=4", "Music|Producing|Gaming", 3.0, "Producer", "Berklee", true, false),
-            UserEntity("u9", "Evelyn", 24, "Beach volleyball player", "https://i.pravatar.cc/400?img=2", "Sports|Beach|Travel", 2.1, "Coach", "USC", false, false),
-            UserEntity("u10", "Abigail", 29, "Wine & dine", "https://i.pravatar.cc/400?img=7", "Wine|Fine dining|Travel", 6.0, "Sommelier", "CIA", true, false)
+            UserEntity("u1", "Emma", 24, "Love hiking and coffee", "https://randomuser.me/api/portraits/women/44.jpg", "Hiking|Coffee|Photography", 2.5, "Engineer", "MIT", true, false),
+            UserEntity("u2", "Sophia", 26, "Foodie & traveler", "https://randomuser.me/api/portraits/women/68.jpg", "Travel|Cooking|Yoga", 1.2, "Doctor", "Harvard", true, false),
+            UserEntity("u3", "Olivia", 23, "Bookworm and dreamer", "https://randomuser.me/api/portraits/women/33.jpg", "Reading|Art|Music", 3.8, "Teacher", "UCLA", false, false),
+            UserEntity("u4", "Isabella", 27, "Adventure seeker", "https://randomuser.me/api/portraits/women/26.jpg", "Climbing|Diving|Travel", 0.8, "Architect", "Columbia", true, false),
+            UserEntity("u5", "Mia", 25, "Dog mom & plant lover", "https://randomuser.me/api/portraits/women/55.jpg", "Pets|Gardening|Cooking", 5.0, "Writer", "NYU", false, false),
+            UserEntity("u6", "Charlotte", 28, "Yoga instructor", "https://randomuser.me/api/portraits/women/17.jpg", "Yoga|Meditation|Health", 4.2, "Instructor", "Stanford", true, false),
+            UserEntity("u7", "Amelia", 22, "Art & fashion enthusiast", "https://randomuser.me/api/portraits/women/62.jpg", "Fashion|Art|Dancing", 1.5, "Student", "Parsons", false, false),
+            UserEntity("u8", "Harper", 26, "Music producer", "https://randomuser.me/api/portraits/women/91.jpg", "Music|Producing|Gaming", 3.0, "Producer", "Berklee", true, false),
+            UserEntity("u9", "Evelyn", 24, "Beach volleyball player", "https://randomuser.me/api/portraits/women/40.jpg", "Sports|Beach|Travel", 2.1, "Coach", "USC", false, false),
+            UserEntity("u10", "Abigail", 29, "Wine & dine", "https://randomuser.me/api/portraits/women/75.jpg", "Wine|Fine dining|Travel", 6.0, "Sommelier", "CIA", true, false)
         )
         userDao.upsertUsers(mockProfiles)
 
         val mockMatches = listOf(
-            MatchEntity("m1", "current_user", "u2", "Sophia", "https://i.pravatar.cc/400?img=5", System.currentTimeMillis() - 3600000, true),
-            MatchEntity("m2", "current_user", "u4", "Isabella", "https://i.pravatar.cc/400?img=3", System.currentTimeMillis() - 86400000, false)
+            MatchEntity("m1", "current_user", "u2", "Sophia", "https://randomuser.me/api/portraits/women/68.jpg", System.currentTimeMillis() - 3600000, true),
+            MatchEntity("m2", "current_user", "u4", "Isabella", "https://randomuser.me/api/portraits/women/26.jpg", System.currentTimeMillis() - 86400000, false)
         )
         matchDao.upsertMatches(mockMatches)
 
